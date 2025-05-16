@@ -24,11 +24,44 @@ body {
   color: var(--foreground);
   font-family: Arial, Helvetica, sans-serif;
 }
-
-.section{
-  background-color: aquamarine;
+.contenedor_div{
+  display: flex;                          /* flex */
+  height: 100vh;                          /* h-screen */
+  align-items: center;                   /* items-center */
+  border: 1px solid rgba(255, 255, 255, 0.1);  /* border + border-white/10 */
+  background-color: rgba(0, 0, 0, 0.35);  /* bg-black/35 */
+  margin: 5rem;    
+  flex-direction: column;
+  
+}
+.section {
+  display: flex;
   width: 100px;
   height: 200px;
- display: flex;
- justify-content: center;
+  justify-content: center;  
+  font-family: "1_Minecraft-Regular.otf";
+  width: 500px;
+  height: 50px;
+  text-align: center;
+  padding: 10;
+  margin: 30;
+  color: white;
+  font-size: 35;
+}
+
+.respuestas {
+  display: flex;
+  flex-wrap: wrap;
+  background-color: wheat;
+  width: 100px;
+  height: 200px;
+  justify-content: center;
+  text-align: center;
+  margin-top: 30;
+}
+
+
+@font-face {
+  font-family: "1_Minecraft-Regular.otf";
+  src: url("/fonts/1_Minecraft-Regular.otf");
 }
