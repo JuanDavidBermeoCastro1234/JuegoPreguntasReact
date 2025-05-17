@@ -21,26 +21,20 @@ export default function ProgressBar({ currentQuestion, totalQuestions }: Progres
   const progressPercentage = (currentQuestion / totalQuestions) * 100
 
   return (
-    <div className="cont-barra-progreso">
+    <div className="mb-4">
       {/* Información textual sobre el progreso */}
-      <div className="info-progreso">
+      <div className="flex justify-between mb-1">
         <span>
           Pregunta {currentQuestion} de {totalQuestions}
         </span>
         <span>{Math.round(progressPercentage)}%</span>
       </div>
       {/* Contenedor de la barra de progreso */}
-      <div className="barra-base">
+      <div className="w-full bg-gray-200 rounded-full h-2.5">
         {/* Barra de progreso que se llena según el porcentaje calculado */}
         <div
-          className="barra-avance"
-          style={{
-            width: `${progressPercentage}%`,
-            height: "10px",
-            backgroundColor: "#2563eb",
-            borderRadius: "9999px",
-            transition: "width 0.3s ease-in-out", // Animación suave al cambiar de pregunta
-          }}
+          className="bg-primary h-2.5 rounded-full transition-all duration-300"
+          style={{ width: `${progressPercentage}%` }}
         ></div>
       </div>
     </div>

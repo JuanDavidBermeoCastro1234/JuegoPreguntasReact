@@ -3,11 +3,11 @@
 import { useState } from "react"
 import Question from "./question"
 import Option from "./option"
-import ProgressBar from "../../components/progress-bar"
-import Lifelines from "../../components/lifelines"
-import ScoreDisplay from "../../components/score-display"
-import GameOver from "../../components/game-over"
-import ProgrammerConsultation from "../../components/contador"
+import ProgressBar from "./progress-bar"
+import Lifelines from "./lifelines"
+import ScoreDisplay from "./score-display"
+import GameOver from "./game-over"
+import ProgrammerConsultation from "./contador"
 
 /**
  * Interfaz que define la estructura de una pregunta del juego
@@ -231,7 +231,7 @@ export default function QuizGame() {
 
   // Renderizar el componente
   return (
-    <div className="cont-juego" style={{ maxWidth: "800px", margin: "0 auto", padding: "20px" }}>
+    <div className="max-w-3xl mx-auto p-5">
       {/* Condicional para mostrar el juego o la pantalla de fin de juego */}
       {!gameOver ? (
         <>
@@ -253,7 +253,7 @@ export default function QuizGame() {
           <Question text={currentQuestion.text} />
 
           {/* Opciones de respuesta */}
-          <div className="cont-opciones" style={{ marginBottom: "20px" }}>
+          <div className="mb-5">
             {/* Mapeo de las opciones de la pregunta actual */}
             {currentQuestion.options.map((option) => (
               <Option
@@ -270,21 +270,15 @@ export default function QuizGame() {
           </div>
 
           {/* Botón para verificar respuesta */}
-          <div className="cont-btn-confirmar" style={{ marginTop: "20px" }}>
+          <div className="mt-5">
             <button
               onClick={checkAnswer}
               disabled={selectedOption === null || isAnswerSubmitted}
-              className={selectedOption === null || isAnswerSubmitted ? "btn-deshabilitado" : "btn-confirmar"}
-              style={{
-                width: "100%",
-                padding: "12px",
-                backgroundColor: selectedOption === null || isAnswerSubmitted ? "#d1d5db" : "#2563eb",
-                color: selectedOption === null || isAnswerSubmitted ? "#6b7280" : "white",
-                border: "none",
-                borderRadius: "8px",
-                cursor: selectedOption === null || isAnswerSubmitted ? "not-allowed" : "pointer",
-                fontWeight: "bold",
-              }}
+              className={`w-full py-3 rounded-lg font-bold ${
+                selectedOption === null || isAnswerSubmitted
+                  ? "bg-gray-300 text-gray-500 cursor-not-allowed"
+                  : "bg-primary text-white cursor-pointer hover:bg-blue-700 transition-colors"
+              }`}
             >
               {isAnswerSubmitted ? "Espera..." : "Confirmar Respuesta"}
             </button>

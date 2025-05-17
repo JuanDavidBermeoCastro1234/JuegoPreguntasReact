@@ -47,80 +47,30 @@ export default function ProgrammerConsultation({ onClose }: ProgrammerConsultati
 
   return (
     // Fondo oscuro que cubre toda la pantalla (modal backdrop)
-    <div
-      className="modal-fondo"
-      style={{
-        position: "fixed",
-        inset: 0, // Equivalente a top: 0, right: 0, bottom: 0, left: 0
-        backgroundColor: "rgba(0, 0, 0, 0.5)", // Fondo semi-transparente
-        display: "flex",
-        alignItems: "center",
-        justifyContent: "center",
-        zIndex: 50, // Asegura que esté por encima de otros elementos
-      }}
-    >
+    <div className="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50">
       {/* Contenido del modal */}
-      <div
-        className="modal-contenido"
-        style={{
-          backgroundColor: "white",
-          padding: "24px",
-          borderRadius: "8px",
-          boxShadow: "0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05)",
-          maxWidth: "28rem",
-          width: "100%",
-          textAlign: "center",
-        }}
-      >
+      <div className="bg-white p-6 rounded-lg shadow-lg max-w-md w-full text-center">
         {/* Título del modal */}
-        <h3 className="modal-titulo" style={{ fontSize: "1.25rem", fontWeight: "bold", marginBottom: "16px" }}>
-          Consulta a un Programador
-        </h3>
+        <h3 className="text-xl font-bold mb-4">Consulta a un Programador</h3>
 
         {/* Instrucciones */}
-        <div
-          className="cont-instrucciones"
-          style={{
-            backgroundColor: "#f3f4f6",
-            padding: "16px",
-            borderRadius: "8px",
-            marginBottom: "16px",
-            textAlign: "left",
-          }}
-        >
-          <p style={{ marginBottom: "8px" }}>
+        <div className="bg-gray-100 p-4 rounded-lg mb-4 text-left">
+          <p className="mb-2">
             Tienes <strong>{formatTime()}</strong> para consultar a un programador físicamente.
           </p>
           <p>Aprovecha este tiempo para hacer tu pregunta a alguien que pueda ayudarte.</p>
         </div>
 
         {/* Contador grande */}
-        <div
-          className="cont-contador"
-          style={{
-            fontSize: "3rem",
-            fontWeight: "bold",
-            margin: "24px 0",
-            color: timeLeft <= 10 ? "#ef4444" : "#2563eb", // Rojo cuando queda poco tiempo
-          }}
-        >
+        <div className={`text-5xl font-bold my-6 ${timeLeft <= 10 ? "text-danger" : "text-primary"}`}>
           {formatTime()}
         </div>
 
         {/* Contenedor del botón de cierre */}
-        <div className="cont-btn-cerrar">
+        <div>
           <button
             onClick={onClose} // Ejecuta la función de cierre al hacer clic
-            className="btn-cerrar"
-            style={{
-              backgroundColor: "#2563eb",
-              color: "white",
-              padding: "8px 16px",
-              borderRadius: "8px",
-              border: "none",
-              cursor: "pointer",
-              width: "100%",
-            }}
+            className="w-full btn-primary hover:bg-blue-700 transition-colors"
           >
             Terminar consulta
           </button>

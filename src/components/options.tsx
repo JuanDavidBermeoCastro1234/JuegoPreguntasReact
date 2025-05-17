@@ -36,57 +36,44 @@ export default function Option({
   isAnswerSubmitted,
 }: OptionProps) {
   /**
-   * Determina el color de fondo de la opción basado en su estado
-   * @returns {string} - Color de fondo en formato hexadecimal
-   */
-  const getBackgroundColor = () => {
-    if (isHidden) return "transparent" // Opción oculta por 50/50
-    if (!isAnswerSubmitted) return isSelected ? "#e0e0e0" : "transparent" // No se ha enviado respuesta
-
-    // Respuesta enviada, mostrar feedback
-    if (isCorrect === true) return "#4ade80" // Verde para respuesta correcta
-    if (isSelected && isCorrect === false) return "#f87171" // Rojo para respuesta incorrecta seleccionada
-    return "transparent" // Otras opciones
-  }
-
-  /**
    * Determina la clase CSS basada en el estado de la opción
-   * @returns {string} - Nombre de clase CSS
+   * @returns {string} - Clases de Tailwind CSS
    */
-  const getClassName = () => {
-    const baseClass = "btn-opcion"
+  const getOptionClasses = () => {
+    const classes = "w-full text-left my-2 py-3 px-4 border rounded transition-all duration-200"
+
+    // Si está oculta (50/50)
     if (isHidden) {
-      return `${baseClass} opcion-oculta`
+      return `${classes} opacity-0 pointer-events-none`
     }
-    return baseClass
+
+    // Si no se ha enviado la respuesta
+    if (!isAnswerSubmitted) {
+      return `${classes} ${isSelected ? "border-primary bg-gray-200" : "border-gray-300 bg-transparent"}`
+    }
+
+    // Si se ha enviado la respuesta
+    if (isCorrect === true) {
+      return `${classes} bg-success text-white border-success`
+    }
+
+    if (isSelected && isCorrect === false) {
+      return `${classes} bg-danger text-white border-danger`
+    }
+
+    return `${classes} border-gray-300 bg-transparent`
   }
 
   return (
     // Botón que representa la opción
     <button
-      className={getClassName()}
+      className={getOptionClasses()}
       // Solo permite seleccionar si no se ha enviado la respuesta y la opción no está oculta
       onClick={() => !isAnswerSubmitted && !isHidden && onSelect(id)}
       disabled={isAnswerSubmitted || isHidden}
-      style={{
-        backgroundColor: getBackgroundColor(),
-        borderColor: isSelected ? "#3b82f6" : "#d1d5db", // Borde azul si está seleccionada
-        width: "100%",
-        textAlign: "left",
-        margin: "8px 0",
-        padding: "12px",
-        border: "1px solid",
-        borderRadius: "4px",
-        transition: "all 0.2s", // Transición suave para cambios de estado
-        opacity: isHidden ? 0 : 1, // Invisible si está oculta (50/50)
-        pointerEvents: isHidden ? "none" : "auto", // No interactuable si está oculta
-      }}
     >
       {/* Identificador de la opción (A, B, C o D) seguido del texto */}
-      <span className="id-opcion" style={{ fontWeight: "bold", marginRight: "8px" }}>
-        {id}:
-      </span>{" "}
-      {text}
+      <span className="font-bold mr-2">{id}:</span> {text}
     </button>
   )
 }

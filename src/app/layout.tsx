@@ -1,4 +1,11 @@
 import type React from "react"
+import type { Metadata } from "next"
+import "./globals.css"
+
+export const metadata: Metadata = {
+  title: "Juego de Preguntas POO",
+  description: "Juego de preguntas sobre Programación Orientada a Objetos",
+}
 
 /**
  * Componente de layout raíz para toda la aplicación
@@ -15,10 +22,6 @@ export default function RootLayout({
 }) {
   return (
     <html lang="es">
-      <head>
-        <title>Juego de Preguntas POO</title>
-        <meta name="description" content="Juego de preguntas sobre Programación Orientada a Objetos" />
-      </head>
       <body>{children}</body>
     </html>
   )

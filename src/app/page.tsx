@@ -1,7 +1,7 @@
 "use client"
 
 // Importamos el componente principal del juego
-import QuizGame from "./components/quiz-game"
+import QuizGame from "../components/quiz-game"
 
 /**
  * Componente principal de la página de preguntas
@@ -12,7 +12,7 @@ import QuizGame from "./components/quiz-game"
 export default function PantallaDePregunta() {
   return (
     // Contenedor principal que alberga todo el juego
-    <main className="quiz-container" style={{ maxWidth: "800px", margin: "0 auto", padding: "2rem" }}>
+    <main className="max-w-3xl mx-auto p-8">
       {/* Renderizamos el componente del juego */}
       <QuizGame />
     </main>

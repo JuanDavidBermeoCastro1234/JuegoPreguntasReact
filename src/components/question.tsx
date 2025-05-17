@@ -17,20 +17,9 @@ interface QuestionProps {
 export default function Question({ text }: QuestionProps) {
   return (
     // Contenedor de la pregunta con estilo visual distintivo
-    <div
-      className="cont-pregunta"
-      style={{
-        backgroundColor: "#eff6ff", // Fondo azul claro
-        border: "2px solid #bfdbfe", // Borde azul
-        borderRadius: "8px",
-        padding: "24px",
-        marginBottom: "24px",
-      }}
-    >
+    <div className="bg-blue-50 border-2 border-blue-200 rounded-lg p-6 mb-6">
       {/* Texto de la pregunta centrado y con estilo destacado */}
-      <h2 className="txt-pregunta" style={{ fontSize: "1.25rem", fontWeight: "bold", textAlign: "center" }}>
-        {text}
-      </h2>
+      <h2 className="text-xl font-bold text-center">{text}</h2>
     </div>
   )
 }

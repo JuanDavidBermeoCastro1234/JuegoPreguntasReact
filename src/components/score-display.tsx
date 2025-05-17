@@ -16,27 +16,13 @@ interface ScoreDisplayProps {
  */
 export default function ScoreDisplay({ currentScore }: ScoreDisplayProps) {
   return (
-    <div
-      className="cont-puntos"
-      style={{
-        backgroundColor: "#fef9c3", // Fondo amarillo claro
-        border: "1px solid #facc15", // Borde amarillo
-        color: "#854d0e", // Texto marrón
-        padding: "8px 16px",
-        borderRadius: "8px",
-        marginBottom: "16px",
-      }}
-    >
+    <div className="bg-yellow-100 border border-warning text-amber-800 p-2 px-4 rounded-lg mb-4">
       {/* Contenedor flexible para alinear la etiqueta y el valor */}
-      <div className="info-puntos" style={{ display: "flex", alignItems: "center", justifyContent: "space-between" }}>
+      <div className="flex items-center justify-between">
         {/* Etiqueta de puntuación */}
-        <span className="etq-puntos" style={{ fontWeight: 600 }}>
-          Puntuación actual:
-        </span>
+        <span className="font-semibold">Puntuación actual:</span>
         {/* Valor de la puntuación */}
-        <span className="val-puntos" style={{ fontSize: "1.25rem", fontWeight: "bold" }}>
-          {currentScore} puntos
-        </span>
+        <span className="text-xl font-bold">{currentScore} puntos</span>
       </div>
     </div>
   )

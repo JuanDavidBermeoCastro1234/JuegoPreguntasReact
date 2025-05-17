@@ -22,38 +22,19 @@ interface GameOverProps {
  */
 export default function GameOver({ finalScore, totalQuestions, correctAnswers, onRestart }: GameOverProps) {
   return (
-    <div
-      className="cont-fin-juego"
-      style={{
-        backgroundColor: "white",
-        padding: "32px",
-        borderRadius: "8px",
-        boxShadow: "0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05)",
-        maxWidth: "28rem",
-        margin: "0 auto",
-        textAlign: "center",
-      }}
-    >
+    <div className="bg-white p-8 rounded-lg shadow-lg max-w-md mx-auto text-center">
       {/* Título de la pantalla de fin de juego */}
-      <h2 className="titulo-fin" style={{ fontSize: "1.5rem", fontWeight: "bold", marginBottom: "16px" }}>
-        ¡Juego Terminado!
-      </h2>
+      <h2 className="text-2xl font-bold mb-4">¡Juego Terminado!</h2>
 
       {/* Sección que muestra la puntuación final */}
-      <div className="seccion-puntos" style={{ marginBottom: "24px" }}>
-        <p className="etq-final" style={{ fontSize: "1.125rem", marginBottom: "8px" }}>
-          Puntuación final:
-        </p>
-        <p className="val-final" style={{ fontSize: "1.875rem", fontWeight: "bold", color: "#2563eb" }}>
-          {finalScore} puntos
-        </p>
+      <div className="mb-6">
+        <p className="text-lg mb-2">Puntuación final:</p>
+        <p className="text-3xl font-bold text-primary">{finalScore} puntos</p>
       </div>
 
       {/* Sección que muestra estadísticas adicionales */}
-      <div className="seccion-stats" style={{ marginBottom: "24px" }}>
-        <p className="etq-stats" style={{ fontSize: "1.125rem", marginBottom: "8px" }}>
-          Estadísticas:
-        </p>
+      <div className="mb-6">
+        <p className="text-lg mb-2">Estadísticas:</p>
         <p>
           Respondiste correctamente {correctAnswers} de {totalQuestions} preguntas
         </p>
@@ -64,16 +45,7 @@ export default function GameOver({ finalScore, totalQuestions, correctAnswers, o
       {/* Botón para reiniciar el juego */}
       <button
         onClick={onRestart} // Ejecuta la función de reinicio al hacer clic
-        className="btn-reiniciar"
-        style={{
-          backgroundColor: "#2563eb",
-          color: "white",
-          padding: "8px 24px",
-          borderRadius: "8px",
-          border: "none",
-          cursor: "pointer",
-          transition: "background-color 0.2s",
-        }}
+        className="btn-primary hover:bg-blue-700 transition-colors"
       >
         Jugar de nuevo
       </button>

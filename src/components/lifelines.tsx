@@ -28,61 +28,35 @@ export default function Lifelines({
   onUseAskProgrammer,
 }: LifelinesProps) {
   return (
-    <div className="cont-ayudas" style={{ display: "flex", gap: "16px", marginBottom: "24px" }}>
+    <div className="flex gap-4 mb-6">
       {/* Botón para la ayuda 50/50 */}
       <button
         onClick={onUseFiftyFifty} // Ejecuta la función al hacer clic
         disabled={fiftyFiftyUsed} // Deshabilita el botón si ya se usó la ayuda
-        className={fiftyFiftyUsed ? "btn-ayuda-usada" : "btn-ayuda"}
-        style={{
-          padding: "8px 16px",
-          borderRadius: "8px",
-          display: "flex",
-          alignItems: "center",
-          justifyContent: "center",
-          backgroundColor: fiftyFiftyUsed ? "#d1d5db" : "#2563eb", // Cambia el color si está usada
-          color: fiftyFiftyUsed ? "#6b7280" : "white",
-          opacity: fiftyFiftyUsed ? 0.5 : 1, // Reduce la opacidad si está usada
-          cursor: fiftyFiftyUsed ? "not-allowed" : "pointer",
-          border: "none",
-        }}
+        className={`flex items-center justify-center px-4 py-2 rounded-lg border-none ${
+          fiftyFiftyUsed
+            ? "bg-gray-300 text-gray-500 opacity-50 cursor-not-allowed"
+            : "bg-primary text-white cursor-pointer"
+        }`}
       >
-        <span className="txt-negrita" style={{ fontWeight: "bold" }}>
-          50:50
-        </span>
+        <span className="font-bold">50:50</span>
         {/* Muestra un indicador si la ayuda ya fue utilizada */}
-        {fiftyFiftyUsed && (
-          <span className="indicador-usado" style={{ marginLeft: "8px", fontSize: "12px" }}>
-            (Usado)
-          </span>
-        )}
+        {fiftyFiftyUsed && <span className="ml-2 text-xs">(Usado)</span>}
       </button>
 
       {/* Botón para la ayuda "Consultar a un programador" */}
       <button
         onClick={onUseAskProgrammer} // Ejecuta la función al hacer clic
         disabled={askProgrammerUsed} // Deshabilita el botón si ya se usó la ayuda
-        className={askProgrammerUsed ? "btn-ayuda-usada" : "btn-ayuda-prog"}
-        style={{
-          padding: "8px 16px",
-          borderRadius: "8px",
-          display: "flex",
-          alignItems: "center",
-          justifyContent: "center",
-          backgroundColor: askProgrammerUsed ? "#d1d5db" : "#16a34a", // Verde para esta ayuda
-          color: askProgrammerUsed ? "#6b7280" : "white",
-          opacity: askProgrammerUsed ? 0.5 : 1, // Reduce la opacidad si está usada
-          cursor: askProgrammerUsed ? "not-allowed" : "pointer",
-          border: "none",
-        }}
+        className={`flex items-center justify-center px-4 py-2 rounded-lg border-none ${
+          askProgrammerUsed
+            ? "bg-gray-300 text-gray-500 opacity-50 cursor-not-allowed"
+            : "bg-green-600 text-white cursor-pointer"
+        }`}
       >
         <span>Consultar Programador</span>
         {/* Muestra un indicador si la ayuda ya fue utilizada */}
-        {askProgrammerUsed && (
-          <span className="indicador-usado" style={{ marginLeft: "8px", fontSize: "12px" }}>
-            (Usado)
-          </span>
-        )}
+        {askProgrammerUsed && <span className="ml-2 text-xs">(Usado)</span>}
       </button>
     </div>
   )
