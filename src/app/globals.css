@@ -5,6 +5,11 @@
   --foreground: #171717;
 }
 
+@font-face {
+  font-family: "1_Minecraft-Regular.otf";
+  src: url("/fonts/1_Minecraft-Regular.otf");
+}
+
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
@@ -24,44 +29,82 @@ body {
   color: var(--foreground);
   font-family: Arial, Helvetica, sans-serif;
 }
+
+.caja-principal{
+  @apply bg-gradient-to-br from-blue-900 via-indigo-900 to-purple-900 w-full min-h-screen transition-all duration-500 m-0 p-0 box-border overflow-hidden;
+}
+.logo{
+  @apply block mx-auto mt-10 rounded-full;
+}
+
 .contenedor_div{
   display: flex;                          /* flex */
-  height: 100vh;                          /* h-screen */
+  height: 55vh;                          /* h-screen */
   align-items: center;                   /* items-center */
-  border: 1px solid rgba(255, 255, 255, 0.1);  /* border + border-white/10 */
   background-color: rgba(0, 0, 0, 0.35);  /* bg-black/35 */
-  margin: 5rem;    
+  margin: 2rem;    
   flex-direction: column;
-  
+  overflow: hidden;
+  font-family: "1_Minecraft-Regular.otf";
 }
 .section {
   display: flex;
-  width: 100px;
-  height: 200px;
   justify-content: center;  
-  font-family: "1_Minecraft-Regular.otf";
   width: 500px;
-  height: 50px;
+  height: 70px;
   text-align: center;
-  padding: 10;
+  justify-content: center;
   margin: 30;
-  color: white;
   font-size: 35;
+  background: linear-gradient(90deg, #000d2d, #000a40);
+  box-shadow: 0 0 10px #00f0ff, 0 0 10px #0047ff;
+  color: #67e8f9;
+  border: 2px solid #00a2ff;
+  border-radius: 20;
+}
+
+
+
+/* ASDFA */
+
+.contenedor-respuestas{
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1rem;
+  padding: 1rem;
+  background: linear-gradient(90deg, #000d2d, #000a40);
+  width: 500px;
+  
 }
 
 .respuestas {
-  display: flex;
-  flex-wrap: wrap;
-  background-color: wheat;
-  width: 100px;
-  height: 200px;
-  justify-content: center;
+  /* outline: 2px solid tomato;  */
+  font-size: 1.125rem; /* equivalente a text-lg */
   text-align: center;
-  margin-top: 30;
+  background: linear-gradient(90deg, #000d2d, #000a40);
+  border: 2px solid #00f0ff;
+  border-radius: 50; /* forma ovalada */
+  padding: 0.75rem 1.5rem;
+  display: flex;
+  align-items: center;
+  box-shadow: 0 0 10px #00f0ff, 0 0 20px #0047ff;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  cursor: pointer;
+}
+
+.respuestas:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 15px #00f0ff, 0 0 30px #00f0ff;
+}
+
+.letra {
+  color: #67e8f9;
+}
+
+.progreso{
+  margin-top: 20px;
+  color: #67e8f9;
 }
 
 
-@font-face {
-  font-family: "1_Minecraft-Regular.otf";
-  src: url("/fonts/1_Minecraft-Regular.otf");
-}
+
