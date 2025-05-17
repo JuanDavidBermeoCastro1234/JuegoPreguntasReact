@@ -108,5 +108,52 @@ body {
   color: #67e8f9;
 }
 
+.correcta {
+  box-shadow: 0 0 30px green;
+  background-color: #d1ffd1;
+}
+
+.incorrecta {
+  box-shadow: 0 0 30px red;
+  background-color: #ffd1d1;
+}
+.correcta:hover{
+  box-shadow: 0 0 30px green;
+  background-color: #d1ffd1;
+}
+
+.incorrecta:hover {
+  box-shadow: 0 0 30px red;
+  background-color: #ffd1d1;
+}
+
+.clase{
+  background-color: #ffd1d1;
+  margin: 10;
+}
+
+.mensaje-final {
+  text-align: center;
+  margin-top: 2rem;
+  font-family: "1_Minecraft-Regular.otf";
+  font-size: 35px;
+  
+}
 
 
+.btn-reiniciar {
+  margin-top: 1rem;
+  padding: 0.8rem 1.5rem;
+  background-color: #1e90ff;
+  color: white;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  font-size: 1rem;
+  transition: background-color 0.3s ease;
+}
+
+.btn-reiniciar:hover {
+  background-color: #187bcd;
+    box-shadow: 0 0 10px #00f0ff, 0 0 20px #0047ff;
+}
