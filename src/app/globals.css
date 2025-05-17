@@ -74,6 +74,7 @@ body {
   padding: 1rem;
   background: linear-gradient(90deg, #000d2d, #000a40);
   width: 500px;
+  color: white;
   
 }
 
@@ -99,6 +100,7 @@ body {
 
 .letra {
   color: #67e8f9;
+  margin-right: 10;
 }
 
 .progreso{
