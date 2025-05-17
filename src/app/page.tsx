@@ -6,6 +6,8 @@ import Image from "next/image";
 
 export default function Home() {  const [currentQuestion, setCurrentQuestion] = useState<any>(null);
   const [selectedOption, setSelectedOption] = useState<string | null>(null);
+  const [score, setScore] = useState(0);
+
 
   useEffect(() => {
     const randomIndex = Math.floor(Math.random() * preguntas.length);
@@ -15,8 +17,13 @@ export default function Home() {  const [currentQuestion, setCurrentQuestion] = 
   const handleClick = (option: string) => {
     if (!selectedOption) {
       setSelectedOption(option);
+  
+      if (option === currentQuestion.respuesta) {
+        setScore((prevScore) => prevScore + 100);
+      }
     }
   };
+  
 
   const getOptionClass = (option: string) => {
     if (!selectedOption) return "bg-white/10";
@@ -74,6 +81,13 @@ export default function Home() {  const [currentQuestion, setCurrentQuestion] = 
             )
           ) : null}
         </div>
+        <div className="mt-6 text-center text-xl font-bold">
+          <p>Puntaje actual: <span className="text-yellow-300">{score} pts</span></p>
+          {score >= 1000 && (
+            <p className="text-green-400 mt-2">🎉 ¡Ganaste el juego! 🎉</p>
+          )}
+        </div>
+
       </div>
     </main>
   );
