@@ -239,3 +239,223 @@ body {
     font-size: 1rem;
   }
 }
+
+/* MODAL GENERAL */
+.modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.7);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 999;
+  backdrop-filter: blur(4px);
+}
+
+.modal-contenido {
+  background: var(--color-primary-light);
+  border: 2px solid var(--color-white);
+  border-radius: 20px;
+  padding: 2rem;
+  text-align: center;
+  max-width: 500px;
+  width: 90%;
+  box-shadow: var(--shadow-glow);
+  font-family: "Minecraft-Regular", sans-serif;
+  color: var(--color-white);
+}
+
+/* BOTONES MODAL */
+.btn-poderes {
+  margin: 1rem;
+  padding: 12px 24px;
+  font-size: 1.1rem;
+  background: linear-gradient(to bottom, var(--color-primary-dark), var(--color-primary-light));
+  color: var(--color-white);
+  border: 2px solid var(--color-white);
+  border-radius: 15px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  font-family: "Minecraft-Regular", sans-serif;
+}
+
+.btn-poderes:hover {
+  background: linear-gradient(to bottom, var(--color-primary-hover-dark), var(--color-primary-hover-light));
+  box-shadow: var(--shadow-glow);
+  transform: translateY(-2px);
+}
+
+.btn-poder {
+  display: block;
+  margin: 1rem auto;
+  padding: 12px;
+  width: 80%;
+  border: 2px solid var(--color-white);
+  border-radius: 12px;
+  background-color: rgba(255, 255, 255, 0.1);
+  color: var(--color-white);
+  cursor: pointer;
+  transition: background 0.3s, transform 0.2s;
+  font-family: "Minecraft-Regular", sans-serif;
+}
+
+.btn-poder:hover {
+  background-color: rgba(255, 255, 255, 0.2);
+  transform: scale(1.02);
+}
+
+.btn-poder.usado {
+  background-color: rgba(128, 128, 128, 0.4);
+  border-color: rgba(255, 255, 255, 0.3);
+  color: #ccc;
+  cursor: not-allowed;
+}
+
+/* BOTON CERRAR MODAL */
+.btn-cerrar {
+  margin-top: 1.5rem;
+  background: red;
+  color: white;
+  padding: 10px 20px;
+  border: 2px solid var(--color-white);
+  border-radius: 12px;
+  font-family: "Minecraft-Regular", sans-serif;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+.btn-cerrar:hover {
+  background: darkred;
+}
+
+/* BOTONES GENERALES */
+.btn-jugar,
+.btn-reiniciar,
+.btn-inicio,
+.btn-historial,
+.btn-volver-inicio,
+.modal-botones button {
+  margin: 0.6rem;
+  padding: 0.8rem 1.2rem;
+  font-size: 1rem;
+  background: linear-gradient(to bottom, var(--color-primary-dark), var(--color-primary-light));
+  color: var(--color-white);
+  border: 2px solid var(--color-white);
+  border-radius: 12px;
+  cursor: pointer;
+  font-family: "Minecraft-Regular", sans-serif;
+  transition: all 0.3s ease;
+}
+
+.btn-jugar:hover,
+.btn-reiniciar:hover,
+.btn-inicio:hover,
+.btn-historial:hover,
+.btn-volver-inicio:hover,
+.modal-botones button:hover {
+  background: linear-gradient(to bottom, var(--color-primary-hover-dark), var(--color-primary-hover-light));
+  box-shadow: var(--shadow-glow);
+  transform: translateY(-2px);
+}
+
+/* INPUT NOMBRE */
+.input-nombre {
+  padding: 10px;
+  margin-bottom: 1rem;
+  border-radius: 10px;
+  width: 80%;
+  border: 2px solid var(--color-white);
+  background-color: rgba(255, 255, 255, 0.1);
+  color: var(--color-white);
+  font-family: "Minecraft-Regular", sans-serif;
+  font-size: 1rem;
+  text-align: center;
+}
+
+/* OPCIONES DE RESPUESTA */
+.opciones .opcion {
+  display: block;
+  margin: 0.5rem auto;
+  padding: 12px;
+  border-radius: 12px;
+  background-color: rgba(255, 255, 255, 0.1);
+  border: 2px solid var(--color-white);
+  width: 80%;
+  color: var(--color-white);
+  font-family: "Minecraft-Regular", sans-serif;
+  cursor: pointer;
+  transition: background 0.3s, transform 0.2s;
+}
+
+.opciones .opcion:hover {
+  background-color: rgba(255, 255, 255, 0.2);
+  transform: scale(1.03);
+}
+
+.opcion.correcta {
+  background-color: rgba(76, 175, 80, 0.8); /* Verde */
+  border-color: #4caf50;
+  color: white;
+}
+
+.opcion.incorrecta {
+  background-color: rgba(244, 67, 54, 0.8); /* Rojo */
+  border-color: #f44336;
+  color: white;
+}
+
+
+/* dfgasdgsdfg */
+
+/* Contenedor del historial */
+.historial {
+  background-color: #1e1e1e; /* mismo fondo que el resto */
+  color: #ffffff; /* texto blanco */
+  padding: 1rem;
+  border-radius: 1rem;
+  margin-top: 1rem;
+  box-shadow: 0 0 10px rgba(255, 255, 255, 0.1);
+}
+
+/* Titulo del historial */
+.historial h3 {
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+  color: #00ffcc;
+  text-align: center;
+}
+
+/* Lista del historial */
+.historial ul {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 1rem 0;
+}
+
+.historial li {
+  background-color: #2a2a2a;
+  color: #ffffff;
+  padding: 0.5rem 1rem;
+  margin-bottom: 0.5rem;
+  border-radius: 0.5rem;
+  font-size: 1rem;
+}
+
+/* Botón de borrar historial solo */
+.historial .btn-borrar {
+  background-color: #ff4d4d;
+  color: white;
+  border: none;
+  padding: 0.5rem 1rem;
+  border-radius: 0.5rem;
+  cursor: pointer;
+  font-size: 1rem;
+  transition: background-color 0.3s ease;
+}
+
+.historial .btn-borrar:hover {
+  background-color: #cc0000;
+}
