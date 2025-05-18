@@ -1,0 +1,66 @@
+@import url(variables.css);
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  height: 100vh;
+  background: linear-gradient(to bottom right, #091f6a, #101943);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: "Minecraft-Regular";
+  color: #fff;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  gap: 40px;
+  h1{
+      text-shadow:
+    -2px -2px 0 #515050,  2px -2px 0 #515050,-2px  2px 0 #515050,2px  2px 0 #515050;
+  }
+}
+
+.logo {
+  width: 50%;
+  filter: drop-shadow(0 0 10px white);
+}
+
+.section_botones {
+  display: flex;
+  gap: 40px;
+  flex-wrap: wrap;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.boton {
+  background: linear-gradient(to bottom, #091f6a, #101943);
+  color: #fff;
+  border: 3px solid white;
+  border-radius: 40px;
+  padding: 15px 35px;
+  font-size: 1.2rem;
+  font-weight: bold;
+  box-shadow: 15px white,  0 0 10px white;
+  cursor: pointer;
+  text-shadow: 0 0 5px #000;
+  transition: all 0.3s ease-in-out;
+  position: relative;
+  font-family: "Minecraft-Regular";
+}
+
+.boton:hover {
+  background: linear-gradient(to bottom, #1e318b, #14205a);
+  box-shadow: 0 0 10px white,  0 0 10px white;
+}
+
+.main {
+  transform: scale(1.15);
+}

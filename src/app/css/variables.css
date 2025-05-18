@@ -1,0 +1,8 @@
+:root{
+    --color-1: #E5E5E5;
+}
+
+@font-face {
+    font-family:"Minecraft-Regular";
+    src: url(../strorage/fonts/1_Minecraft-Regular.otf);
+}
