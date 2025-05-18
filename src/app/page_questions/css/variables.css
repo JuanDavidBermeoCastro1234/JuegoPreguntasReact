@@ -1,0 +1,26 @@
+:root {
+    /* Colores principales */
+    --color-primary-dark: #091f6a;
+    --color-primary-light: #101943;
+    --color-primary-hover-dark: #1e318b;
+    --color-primary-hover-light: #14205a;
+
+    /* Colores neutros */
+    --color-white: #ffffff;
+    --color-black: #000000;
+    --color-gray-shadow: #515050;
+
+    /* Efectos */
+    --shadow-text: -2px -2px 0 var(--color-gray-shadow),
+        2px -2px 0 var(--color-gray-shadow),
+        -2px 2px 0 var(--color-gray-shadow),
+        2px 2px 0 var(--color-gray-shadow);
+    --shadow-glow: 0 0 10px var(--color-white);
+    --shadow-button: 15px var(--color-white), 0 0 10px var(--color-white);
+    --shadow-button-hover: 0 0 10px var(--color-white), 0 0 10px var(--color-white);
+}
+
+@font-face {
+    font-family: "Minecraft-Regular";
+    src: url(../storage/fonts/1_Minecraft-Regular.otf);
+}

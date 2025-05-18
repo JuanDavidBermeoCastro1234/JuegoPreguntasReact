@@ -1,7 +1,7 @@
 "use client";
 
 import Image from "next/image";
-import preguntasData from "./preguntas.json";
+import preguntasData from "./page_questions/preguntas.json";
 import { useState, useEffect } from "react";
 
 interface Pregunta {
@@ -93,6 +93,10 @@ export default function Home() {
         <div className="contenedor_div">
           <section className="section">
             <h2>{preguntaActual.titulo}</h2>
+            <div className="enunciado">
+              <p>{preguntaActual.enunciado}</p>
+              <p className="pregunta-texto">{preguntaActual.pregunta}</p>
+            </div>
           </section>
 
           <section className="contenedor-respuestas">
