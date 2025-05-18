@@ -6,8 +6,9 @@
 }
 
 @font-face {
-  font-family: "1_Minecraft-Regular.otf";
-  src: url("/fonts/1_Minecraft-Regular.otf");
+  font-family: "Minecraft";
+  src: url("/fonts/1_Minecraft-Regular.otf") format("opentype");
+  font-display: swap;
 }
 
 @theme inline {
@@ -30,130 +31,130 @@ body {
   font-family: Arial, Helvetica, sans-serif;
 }
 
-.caja-principal{
+.caja-principal {
   @apply bg-gradient-to-br from-blue-900 via-indigo-900 to-purple-900 w-full min-h-screen transition-all duration-500 m-0 p-0 box-border overflow-hidden;
 }
-.logo{
+
+.logo {
   @apply block mx-auto mt-10 rounded-full;
 }
 
-.contenedor_div{
-  display: flex;                          /* flex */
-  height: 55vh;                          /* h-screen */
-  align-items: center;                   /* items-center */
-  background-color: rgba(0, 0, 0, 0.35);  /* bg-black/35 */
-  margin: 2rem;    
+.contenedor_div {
+  display: flex;
   flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 55vh;
+  background-color: rgba(0, 0, 0, 0.35);
+  margin: 2rem;
   overflow: hidden;
-  font-family: "1_Minecraft-Regular.otf";
+  border-radius: 2rem;
+  font-family: "Minecraft", monospace;
 }
+
 .section {
   display: flex;
-  justify-content: center;  
-  width: 500px;
-  height: 70px;
-  text-align: center;
   justify-content: center;
-  margin: 30;
-  font-size: 35;
+  align-items: center;
+  width: 100%;
+  max-width: 500px;
+  height: 70px;
+  font-size: 35px;
+  text-align: center;
   background: linear-gradient(90deg, #000d2d, #000a40);
-  box-shadow: 0 0 10px #00f0ff, 0 0 10px #0047ff;
-  color: #67e8f9;
-  border: 2px solid #00a2ff;
-  border-radius: 20;
+  box-shadow: 0 0 10px #ffffff, 0 0 10px #ffffff;
+  color: #ffffff;
+  border: 2px solid #ffffff;
+  border-radius: 20px;
+  margin: 30px auto;
 }
 
-
-
-/* ASDFA */
-
-.contenedor-respuestas{
+.contenedor-respuestas {
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 1rem;
   padding: 1rem;
   background: linear-gradient(90deg, #000d2d, #000a40);
-  width: 500px;
+  width: 100%;
+  max-width: 500px;
   color: white;
-  
 }
 
 .respuestas {
-  /* outline: 2px solid tomato;  */
-  font-size: 1.125rem; /* equivalente a text-lg */
+  font-size: 1.125rem;
   text-align: center;
   background: linear-gradient(90deg, #000d2d, #000a40);
-  border: 2px solid #00f0ff;
-  border-radius: 50; /* forma ovalada */
+  border: 2px solid #ffffff;
+  border-radius: 50px;
   padding: 0.75rem 1.5rem;
   display: flex;
   align-items: center;
-  box-shadow: 0 0 10px #00f0ff, 0 0 20px #0047ff;
+  justify-content: center;
+  box-shadow: 0 0 10px #ffffff, 0 0 10px #ffffff;
   transition: transform 0.2s ease, box-shadow 0.2s ease;
   cursor: pointer;
 }
 
 .respuestas:hover {
   transform: scale(1.05);
-  box-shadow: 0 0 15px #00f0ff, 0 0 30px #00f0ff;
+  box-shadow: 0 0 15px #ffffff, 0 0 30px #ffffff;
 }
 
 .letra {
   color: #67e8f9;
-  margin-right: 10;
+  margin-right: 10px;
 }
 
-.progreso{
+.progreso {
   margin-top: 20px;
   color: #67e8f9;
 }
 
 .correcta {
-  box-shadow: 0 0 30px green;
   background-color: #d1ffd1;
+  box-shadow: 0 0 30px green;
+}
+
+.correcta:hover {
+  background-color: #d1ffd1;
+  box-shadow: 0 0 30px green;
 }
 
 .incorrecta {
-  box-shadow: 0 0 30px red;
   background-color: #ffd1d1;
-}
-.correcta:hover{
-  box-shadow: 0 0 30px green;
-  background-color: #d1ffd1;
+  box-shadow: 0 0 30px red;
 }
 
 .incorrecta:hover {
-  box-shadow: 0 0 30px red;
   background-color: #ffd1d1;
+  box-shadow: 0 0 30px red;
 }
 
-.clase{
+.clase {
   background-color: #ffd1d1;
-  margin: 10;
+  margin: 10px;
 }
 
 .mensaje-final {
   text-align: center;
   margin-top: 2rem;
-  font-family: "1_Minecraft-Regular.otf";
+  font-family: "Minecraft", monospace;
   font-size: 35px;
-  
 }
-
 
 .btn-reiniciar {
   margin-top: 1rem;
   padding: 0.8rem 1.5rem;
-  background-color: #1e90ff;
+  background-color: #000a40;
   color: white;
   border: none;
   border-radius: 10px;
   cursor: pointer;
-  font-size: 1rem;
-  transition: background-color 0.3s ease;
+  font-size: 1.5rem;
+  transition: background-color 0.3s ease, box-shadow 0.3s ease;
 }
 
 .btn-reiniciar:hover {
-  background-color: #187bcd;
-    box-shadow: 0 0 10px #00f0ff, 0 0 20px #0047ff;
+  background-color: #000c49;
+  box-shadow: 0 0 10px #ffffff, 0 0 20px #ffffff;
 }
