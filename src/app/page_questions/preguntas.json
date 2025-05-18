@@ -1,0 +1,282 @@
+[
+  {
+    "id": 1,
+    "categoria": "CLASE",
+    "titulo": "Analogía Pokémon",
+    "enunciado": "Imagina que estás armando una colección de Pokémon. Todos los Pikachu que capturas tienen habilidades similares, pero cada uno puede tener alguna diferencia única.",
+    "pregunta": "¿Qué representa el 'Pikachu' como especie en este caso?",
+    "opciones": [
+      "Un archivo de texto plano",
+      "Una clase",
+      "Un ciclo",
+      "Un número aleatorio"
+    ],
+    "respuesta": "Una clase"
+  },
+  {
+    "id": 2,
+    "categoria": "OBJETO",
+    "titulo": "Analogía Galletas",
+    "enunciado": "Tienes una receta para hacer galletas. Cada vez que la usas, obtienes una galleta con forma y sabor similar.",
+    "pregunta": "¿Qué representa cada galleta hecha con esa receta?",
+    "opciones": [
+      "Un objeto",
+      "Un atributo",
+      "Una función",
+      "Una carpeta"
+    ],
+    "respuesta": "Un objeto"
+  },
+  {
+    "id": 3,
+    "categoria": "HERENCIA",
+    "titulo": "Analogía Vehículo",
+    "enunciado": "Supón que tienes una clase padre llamada Vehículo, y de ahí creas clases como Auto, Moto y Bicicleta que heredan características comunes.",
+    "pregunta": "¿Qué concepto de POO estás usando?",
+    "opciones": [
+      "Polimorfismo",
+      "Encapsulamiento",
+      "Herencia",
+      "Sobrecarga"
+    ],
+    "respuesta": "Herencia"
+  },
+  {
+    "id": 4,
+    "categoria": "ENCAPSULAMIENTO",
+    "titulo": "Analogía Celular",
+    "enunciado": "Piensa en un celular: tiene una carcasa que protege sus componentes internos y no puedes acceder directamente a sus partes internas.",
+    "pregunta": "¿Qué concepto representa esto en la POO?",
+    "opciones": [
+      "Herencia",
+      "Polimorfismo",
+      "Encapsulamiento",
+      "Recursividad"
+    ],
+    "respuesta": "Encapsulamiento"
+  },
+  {
+    "id": 5,
+    "categoria": "POLIMORFISMO",
+    "titulo": "Analogía Animal",
+    "enunciado": "Tienes una función llamada 'hablar'. Cuando la usan un perro, un gato y una vaca, cada uno emite un sonido diferente.",
+    "pregunta": "¿Qué concepto se está ilustrando?",
+    "opciones": [
+      "Abstracción",
+      "Polimorfismo",
+      "Aritmética",
+      "Eventos"
+    ],
+    "respuesta": "Polimorfismo"
+  },
+  {
+    "id": 6,
+    "categoria": "SOBRECARGA",
+    "titulo": "Analogía Herramientas",
+    "enunciado": "Usas diferentes destornilladores (plano, estrella) para ajustar tornillos, aunque todos se llaman 'destornillador'.",
+    "pregunta": "¿Qué representa esto en programación?",
+    "opciones": [
+      "Encapsulamiento",
+      "Herencia múltiple",
+      "Sobrecarga de métodos",
+      "Recursividad infinita"
+    ],
+    "respuesta": "Sobrecarga de métodos"
+  },
+  {
+    "id": 7,
+    "categoria": "HISTORIA",
+    "titulo": "Origen de la POO",
+    "enunciado": "En 1967 nace el lenguaje Simula 67, que introdujo una nueva forma de organizar el código.",
+    "pregunta": "¿Qué lo hizo famoso?",
+    "opciones": [
+      "Fue el primer sistema operativo",
+      "Introdujo HTML",
+      "Dio origen a la POO",
+      "Usó comas"
+    ],
+    "respuesta": "Dio origen a la POO"
+  },
+  {
+    "id": 8,
+    "categoria": "FRAMEWORK",
+    "titulo": "Analogía Construcción",
+    "enunciado": "Un framework es como un conjunto de planos y herramientas que te ayuda a construir más rápido una casa (software).",
+    "pregunta": "¿Qué es un framework en desarrollo de software?",
+    "opciones": [
+      "Una app para dibujar",
+      "Un sistema operativo",
+      "Una estructura para desarrollar software",
+      "Una base de datos"
+    ],
+    "respuesta": "Una estructura para desarrollar software"
+  },
+  {
+    "id": 9,
+    "categoria": "PYTHON",
+    "titulo": "Framework Backend",
+    "enunciado": "En Python se puede crear un servidor web utilizando frameworks como Flask.",
+    "pregunta": "¿Cuál de los siguientes es un framework de backend en Python?",
+    "opciones": [
+      "Flask",
+      "Spring Boot",
+      "Laravel",
+      "React"
+    ],
+    "respuesta": "Flask"
+  },
+  {
+    "id": 10,
+    "categoria": "BACKEND",
+    "titulo": "Analogía Restaurante",
+    "enunciado": "El backend de un sistema es como la cocina de un restaurante, donde se preparan los platos pedidos.",
+    "pregunta": "¿Qué rol cumple el backend?",
+    "opciones": [
+      "El DJ",
+      "El diseñador del menú",
+      "El que cocina y gestiona la cocina",
+      "El valet parking"
+    ],
+    "respuesta": "El que cocina y gestiona la cocina"
+  },
+  {
+    "id": 11,
+    "categoria": "SQL",
+    "titulo": "Estructura SQL",
+    "enunciado": "Una base de datos relacional organiza la información en tablas con filas y columnas.",
+    "pregunta": "¿Qué estructura usa SQL?",
+    "opciones": [
+      "Colecciones desordenadas",
+      "Tablas con filas y columnas",
+      "Archivos PDF",
+      "Post-its"
+    ],
+    "respuesta": "Tablas con filas y columnas"
+  },
+  {
+    "id": 12,
+    "categoria": "NoSQL",
+    "titulo": "Bases No Relacionales",
+    "enunciado": "Las bases NoSQL permiten almacenar información en formato clave-valor, documentos o grafos.",
+    "pregunta": "¿Qué permite una base de datos NoSQL?",
+    "opciones": [
+      "SQL",
+      "XML",
+      "CSV",
+      "NoSQL"
+    ],
+    "respuesta": "NoSQL"
+  },
+  {
+    "id": 13,
+    "categoria": "CLASE ABSTRACTA",
+    "titulo": "Analogía Mamífero",
+    "enunciado": "La clase 'Mamífero' es general y no se puede instanciar directamente, pero se usa para crear otras clases como 'Perro' o 'Gato'.",
+    "pregunta": "¿Qué tipo de clase es 'Mamífero'?",
+    "opciones": [
+      "Clase privada",
+      "Clase concreta",
+      "Clase abstracta",
+      "Clase final"
+    ],
+    "respuesta": "Clase abstracta"
+  },
+  {
+    "id": 14,
+    "categoria": "MÉTODOS",
+    "titulo": "Funciones del objeto",
+    "enunciado": "Si tienes un objeto llamado Auto, este puede arrancar, frenar o acelerar.",
+    "pregunta": "¿Qué representan esos comportamientos?",
+    "opciones": [
+      "Variables compartidas",
+      "Nombres de los objetos",
+      "Comportamientos",
+      "Tipos de datos"
+    ],
+    "respuesta": "Comportamientos"
+  },
+  {
+    "id": 15,
+    "categoria": "ATRIBUTOS",
+    "titulo": "Propiedades del objeto",
+    "enunciado": "Un objeto Auto puede tener color, marca y modelo.",
+    "pregunta": "¿Qué representan esas características?",
+    "opciones": [
+      "Habilidades",
+      "Colores, marca, modelo",
+      "Errores",
+      "Movimientos"
+    ],
+    "respuesta": "Colores, marca, modelo"
+  },
+  {
+    "id": 16,
+    "categoria": "SQL",
+    "titulo": "Consulta SQL",
+    "enunciado": "Quieres ver todos los registros de una tabla llamada 'clientes' en una base de datos SQL.",
+    "pregunta": "¿Qué sentencia deberías usar?",
+    "opciones": [
+      "PRINT * FROM clientes;",
+      "SHOW clientes;",
+      "SELECT * FROM clientes;",
+      "ECHO clientes;"
+    ],
+    "respuesta": "SELECT * FROM clientes;"
+  },
+  {
+    "id": 17,
+    "categoria": "BACKEND",
+    "titulo": "Conexión a la base",
+    "enunciado": "El backend debe comunicarse con la base de datos para guardar y recuperar información.",
+    "pregunta": "¿Con qué se comunica directamente el backend?",
+    "opciones": [
+      "Router Wi-Fi",
+      "API externa",
+      "Base de datos",
+      "Frontend"
+    ],
+    "respuesta": "Base de datos"
+  },
+  {
+    "id": 18,
+    "categoria": "SQL vs NoSQL",
+    "titulo": "Comparación de esquemas",
+    "enunciado": "Las bases SQL requieren un esquema fijo, mientras que NoSQL permite estructuras más flexibles.",
+    "pregunta": "¿Cuál es una diferencia clave?",
+    "opciones": [
+      "SQL no permite búsquedas",
+      "NoSQL usa tablas",
+      "SQL tiene esquema fijo",
+      "SQL es más nuevo"
+    ],
+    "respuesta": "SQL tiene esquema fijo"
+  },
+  {
+    "id": 19,
+    "categoria": "NoSQL",
+    "titulo": "Flexibilidad",
+    "enunciado": "NoSQL permite guardar datos sin una estructura fija, adaptándose a distintos tipos de información.",
+    "pregunta": "¿Qué ventaja ofrece NoSQL?",
+    "opciones": [
+      "Seguridad avanzada",
+      "Conexión a redes",
+      "Esquema flexible",
+      "Menor consumo eléctrico"
+    ],
+    "respuesta": "Esquema flexible"
+  },
+  {
+    "id": 20,
+    "categoria": "CAPAS",
+    "titulo": "Capa de persistencia",
+    "enunciado": "En una app bancaria, la información de cuentas debe almacenarse en algún lugar para que no se pierda.",
+    "pregunta": "¿Qué capa guarda esta información?",
+    "opciones": [
+      "Capa de presentación",
+      "Capa de persistencia",
+      "Capa de estilo",
+      "Capa visual"
+    ],
+    "respuesta": "Capa de persistencia"
+  }
+]

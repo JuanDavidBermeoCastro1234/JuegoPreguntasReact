@@ -1,0 +1,241 @@
+@import url(variables.css);
+
+/* Estilos base */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  min-height: 100vh;
+  background: linear-gradient(to bottom right, var(--color-primary-dark), var(--color-primary-light));
+  font-family: "Minecraft-Regular", sans-serif;
+  color: var(--color-white);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+}
+
+/* Contenedor principal */
+.caja-principal {
+  width: 100%;
+  max-width: 800px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 30px;
+  text-align: center;
+}
+
+.logo {
+  width: 200px;
+  height: 200px;
+  object-fit: contain;
+  filter: drop-shadow(var(--shadow-glow));
+}
+
+/* Mensaje final */
+.mensaje-final {
+  background-color: var(--color-primary-light);
+  border: 2px solid var(--color-white);
+  border-radius: 15px;
+  padding: 30px;
+  width: 100%;
+  max-width: 600px;
+  box-shadow: var(--shadow-glow);
+}
+
+.mensaje-final h2 {
+  font-size: 1.8rem;
+  margin-bottom: 20px;
+}
+
+.correcta {
+  color: #4caf50;
+  text-shadow: 0 0 10px rgba(76, 175, 80, 0.5);
+}
+
+.incorrecta {
+  color: #f44336;
+  text-shadow: 0 0 10px rgba(244, 67, 54, 0.5);
+}
+
+.btn-reiniciar {
+  background: linear-gradient(to bottom, var(--color-primary-dark), var(--color-primary-light));
+  color: var(--color-white);
+  border: 2px solid var(--color-white);
+  border-radius: 30px;
+  padding: 12px 30px;
+  font-size: 1.1rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  font-family: "Minecraft-Regular";
+  margin-top: 15px;
+}
+
+.btn-reiniciar:hover {
+  background: linear-gradient(to bottom, var(--color-primary-hover-dark), var(--color-primary-hover-light));
+  box-shadow: var(--shadow-glow);
+  transform: translateY(-2px);
+}
+
+/* Contenedor de preguntas */
+.contenedor_div {
+  background-color: var(--color-primary-light);
+  border: 2px solid var(--color-white);
+  border-radius: 15px;
+  padding: 25px;
+  width: 100%;
+  max-width: 700px;
+  box-shadow: var(--shadow-glow);
+}
+
+.section h2 {
+  font-size: 1.5rem;
+  margin-bottom: 20px;
+  color: var(--color-white);
+  text-shadow: var(--shadow-text);
+}
+
+/* Enunciado y pregunta */
+.enunciado {
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 10px;
+  padding: 15px;
+  margin-bottom: 20px;
+  text-align: left;
+}
+
+.enunciado p {
+  margin-bottom: 10px;
+  line-height: 1.5;
+}
+
+.pregunta-texto {
+  font-weight: bold;
+  font-size: 1.1rem;
+  color: var(--color-white);
+  margin-top: 15px;
+}
+
+/* Contenedor de respuestas */
+.contenedor-respuestas {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 15px;
+  margin: 25px 0;
+}
+
+.respuestas {
+  background: rgba(255, 255, 255, 0.1);
+  border: 2px solid var(--color-white);
+  border-radius: 10px;
+  padding: 15px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  text-align: left;
+  display: flex;
+  gap: 10px;
+  align-items: center;
+}
+
+.respuestas:hover {
+  background: rgba(255, 255, 255, 0.2);
+  transform: translateY(-2px);
+}
+
+.respuestas.correcta {
+  background: rgba(76, 175, 80, 0.3);
+  border-color: #4caf50;
+  animation: pulse-correct 0.5s;
+}
+
+.respuestas.incorrecta {
+  background: rgba(244, 67, 54, 0.3);
+  border-color: #f44336;
+  animation: shake 0.5s;
+}
+
+@keyframes pulse-correct {
+  0% { transform: scale(1); }
+  50% { transform: scale(1.05); }
+  100% { transform: scale(1); }
+}
+
+@keyframes shake {
+  0%, 100% { transform: translateX(0); }
+  20%, 60% { transform: translateX(-5px); }
+  40%, 80% { transform: translateX(5px); }
+}
+
+.letra {
+  font-weight: bold;
+  color: var(--color-white);
+  min-width: 20px;
+}
+
+/* Sección de progreso */
+.progreso {
+  margin-top: 20px;
+  padding-top: 15px;
+  border-top: 1px solid rgba(255, 255, 255, 0.2);
+  display: flex;
+  justify-content: space-between;
+}
+
+.progreso h2 {
+  font-size: 1.2rem;
+  margin-bottom: 5px;
+}
+
+.progreso p {
+  font-size: 1rem;
+  opacity: 0.8;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .contenedor_div {
+    padding: 20px;
+  }
+  
+  .section h2 {
+    font-size: 1.3rem;
+  }
+  
+  .enunciado {
+    font-size: 0.9rem;
+    padding: 12px;
+  }
+  
+  .pregunta-texto {
+    font-size: 1rem;
+  }
+  
+  .respuestas {
+    padding: 12px;
+    font-size: 0.9rem;
+  }
+  
+  .mensaje-final {
+    padding: 20px;
+  }
+  
+  .mensaje-final h2 {
+    font-size: 1.4rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .progreso {
+    flex-direction: column;
+    gap: 10px;
+  }
+  
+  .btn-reiniciar {
+    padding: 10px 20px;
+    font-size: 1rem;
+  }
+}

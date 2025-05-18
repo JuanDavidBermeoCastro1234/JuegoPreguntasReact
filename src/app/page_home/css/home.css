@@ -1,6 +1,5 @@
 @import url(variables.css);
 
-/* Estilos base (se mantienen igual) */
 * {
   box-sizing: border-box;
   margin: 0;
@@ -70,6 +69,7 @@ body {
 
 .boton.main {
   transform: scale(1.15);
+  text-decoration: none;
 }
 
 .subtitle {
@@ -79,9 +79,6 @@ body {
   text-shadow: 0 0 5px rgba(255, 255, 255, 0.5);
 }
 
-/* ------------------------- */
-/* ESTILOS DEL MODAL MEJORADOS */
-/* ------------------------- */
 
 .modal {
   position: fixed;
