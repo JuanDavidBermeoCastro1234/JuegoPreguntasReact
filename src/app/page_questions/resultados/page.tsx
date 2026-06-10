@@ -1,9 +1,9 @@
 "use client";
 
 import { useSearchParams, useRouter } from "next/navigation";
-import { useEffect } from "react";
+import { Suspense, useEffect } from "react";
 
-export default function Resultado() {
+function ResultadoContent() {
   const searchParams = useSearchParams();
   const router = useRouter();
 
@@ -30,6 +30,14 @@ export default function Resultado() {
         <p>🔄 Reiniciando en 5 segundos...</p>
       </div>
     </main>
+  );
+}
+
+export default function Resultado() {
+  return (
+    <Suspense fallback={null}>
+      <ResultadoContent />
+    </Suspense>
   );
 }
 

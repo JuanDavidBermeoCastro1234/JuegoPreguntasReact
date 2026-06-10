@@ -24,7 +24,6 @@ export default function Home() {
   const [preguntaActual, setPreguntaActual] = useState<Pregunta | null>(null);
   const [puntaje, setPuntaje] = useState(0);
   const [seleccion, setSeleccion] = useState<string | null>(null);
-  const [respuestaCorrecta, setRespuestaCorrecta] = useState<boolean | null>(null);
   const [contadorPreguntas, setContadorPreguntas] = useState(0);
   const [estadoJuego, setEstadoJuego] = useState<"inicio" | "jugando" | "ganaste" | "perdiste">("inicio");
 
@@ -50,7 +49,6 @@ export default function Home() {
     const aleatoria = lista[Math.floor(Math.random() * lista.length)];
     setPreguntaActual(aleatoria);
     setSeleccion(null);
-    setRespuestaCorrecta(null);
     setOpcionesReducidas(null);
     setMostrarRespuestaPoder(false);
   };
@@ -78,7 +76,6 @@ export default function Home() {
 
     const esCorrecta = opcion === preguntaActual?.respuesta;
     setSeleccion(opcion);
-    setRespuestaCorrecta(esCorrecta);
     const nuevasBuenas = puntaje + (esCorrecta ? 1 : 0);
     const nuevasContador = contadorPreguntas + 1;
 
